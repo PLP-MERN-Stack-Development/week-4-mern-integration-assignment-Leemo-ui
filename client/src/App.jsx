@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import PostList from './components/PostList';
-import PostForm from './components/PostForm';
+import Navbar from './components/Navbar.jsx';
+import PostList from './components/PostList.jsx';
+import PostForm from './components/PostForm.jsx';
 
 function App() {
   return (
