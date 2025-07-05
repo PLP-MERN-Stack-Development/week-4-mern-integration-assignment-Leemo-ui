@@ -1,3 +1,48 @@
+# MERN Blog - React + Vite
+
+## Project Overview
+
+This project is a simple MERN (MongoDB, Express, React, Node.js) blog application frontend built with React and Vite. It allows users to view, create, and edit blog posts with a modern UI.
+
+## Setup Instructions
+
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+2. **Start the development server:**
+   ```sh
+   npm run dev
+   ```
+
+3. **Open your browser:**  
+   Visit [http://localhost:5173](http://localhost:5173)
+
+> **Note:** Ensure your backend API is running and accessible.
+
+## API Documentation
+
+The frontend expects the following API endpoints from the backend:
+
+- `GET /api/posts` — Fetch all blog posts
+- `POST /api/posts` — Create a new blog post
+- `GET /api/posts/:id` — Fetch a single post by ID
+- `PUT /api/posts/:id` — Update a post by ID
+- `DELETE /api/posts/:id` — Delete a post by ID
+
+All endpoints should return JSON.
+
+## Features Implemented
+
+- View a list of all blog posts
+- Create a new blog post
+- Edit an existing blog post
+- Responsive and modern UI with animated navbar logo
+- Routing with React Router
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
