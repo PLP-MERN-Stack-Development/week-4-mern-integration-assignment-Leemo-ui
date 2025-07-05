@@ -10,23 +10,11 @@ export default function Navbar() {
           </Link>
           
           <div className="flex gap-4">
-            <Link 
-              to="/" 
-              className="text-gray-600 hover:text-blue-500"
-            >
+            <Link to="/" className="text-gray-600 hover:text-blue-500">
               Home
             </Link>
-            <Link 
-              to="/posts/new" 
-              className="text-gray-600 hover:text-blue-500"
-            >
+            <Link to="/posts/new" className="text-gray-600 hover:text-blue-500">
               New Post
-            </Link>
-            <Link 
-              to="/login" 
-              className="text-gray-600 hover:text-blue-500"
-            >
-              Login
             </Link>
           </div>
         </div>

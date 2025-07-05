@@ -1,33 +1,15 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import PostItem from './PostItem';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function PostList() {
   const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get('/api/posts');
-        setPosts(response.data);
-      } catch (err) {
-        console.error('Error fetching posts:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPosts();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
 
   return (
-    <div>
-      <h1>Blog Posts</h1>
-      {posts.map(post => (
-        <PostItem key={post._id} post={post} />
-      ))}
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Blog Posts</h1>
+      <div className="grid gap-4">
+        {/* Posts will be rendered here */}
+      </div>
     </div>
   );
 }
