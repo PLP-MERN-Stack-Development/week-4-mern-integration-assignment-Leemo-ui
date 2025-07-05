@@ -1,33 +1,37 @@
+import { Link } from 'react-router-dom';
+
 export default function Hero() {
   return (
-    <div className="relative bg-indigo-800 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-indigo-800 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
-            <div className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-              <div className="sm:text-center lg:text-left">
-                <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-                  <span className="block">Share Your</span>
-                  <span className="block text-yellow-400">Thoughts & Ideas</span>
-                </h1>
-                <p className="mt-3 text-base text-indigo-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Join our community of writers and readers. Create, share, and discover amazing content.
-                </p>
-                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                  <div className="rounded-md shadow">
-                    <Link
-                      to="/posts/new"
-                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-yellow-400 hover:bg-yellow-500 md:py-4 md:text-lg md:px-10 transition-colors"
-                    >
-                      Start Writing Now
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="relative bg-gradient-to-br from-indigo-900 to-purple-800 text-white py-20 px-4 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-purple-400"></div>
+        <div className="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-indigo-400"></div>
+      </div>
+      
+      <div className="relative max-w-5xl mx-auto text-center">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <span className="block">Share Your</span>
+          <span className="block text-yellow-300">Digital Story</span>
+        </h1>
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+          Create beautiful blog posts with our intuitive editor and join a community of passionate writers.
+        </p>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Link 
+            to="/posts/new" 
+            className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-3 rounded-lg transition-all transform hover:scale-105 shadow-lg"
+          >
+            Start Writing Now
+          </Link>
+          <Link 
+            to="/" 
+            className="border-2 border-white hover:bg-white hover:text-indigo-900 font-semibold px-8 py-3 rounded-lg transition-all"
+          >
+            Explore Posts
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
