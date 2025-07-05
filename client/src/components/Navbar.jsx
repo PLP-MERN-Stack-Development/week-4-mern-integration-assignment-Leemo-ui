@@ -1,16 +1,23 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
   return (
     <nav className="bg-gradient-to-r from-indigo-600 to-purple-600 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <Link 
-            to="/" 
-            className="text-white text-2xl font-bold hover:text-indigo-200 transition-colors"
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            MERN<span className="text-yellow-300">Blog</span>
-          </Link>
+            <Link 
+              to="/" 
+              className="text-white text-2xl font-bold hover:text-indigo-200 transition-colors"
+            >
+              MERN<span className="text-yellow-300">Blog</span>
+            </Link>
+          </motion.div>
           <div className="flex space-x-4">
             <Link 
               to="/" 
