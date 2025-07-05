@@ -58,3 +58,4 @@ If you are developing a production application, we recommend using TypeScript wi
 
 // Screenshots of the application
 
+![alt text](<Screenshot from 2025-07-05 17-37-08.png>)
